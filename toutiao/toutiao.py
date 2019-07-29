@@ -11,7 +11,7 @@ headers = {
 #"Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
 "Connection": "keep-alive",
 #"Content-Type": "application/x-www-form-urlencoded",
-"Cookie": "tt_webid=6717096098433762829; WEATHER_CITY=%E5%8C%97%E4%BA%AC; UM_distinctid=16c226f5aad281-0a474fbe453b24-3f385804-100200-16c226f5aae10b; tt_webid=6717096098433762829; csrftoken=69410d166d42d2e30979270c9918eaf1; __tasessionId=n49sdq96k1563948391382; CNZZDATA1259612802=1800301175-1563941590-https%253A%252F%252Fwww.baidu.com%252F%7C1563946990",
+#"Cookie": "tt_webid=6717096098433762829; WEATHER_CITY=%E5%8C%97%E4%BA%AC; UM_distinctid=16c226f5aad281-0a474fbe453b24-3f385804-100200-16c226f5aae10b; tt_webid=6717096098433762829; csrftoken=69410d166d42d2e30979270c9918eaf1; __tasessionId=n49sdq96k1563948391382; CNZZDATA1259612802=1800301175-1563941590-https%253A%252F%252Fwww.baidu.com%252F%7C1563946990",
 "Host": "www.toutiao.com",
 "Referer": "https://www.toutiao.com/ch/news_hot/",
 "User-Agent": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36",
@@ -35,6 +35,6 @@ from urllib.parse import urlencode
 # print(str(c).upper())
 
 # 运行js 加密函数
-with open('toutiao.js','r') as f :
+with open(r'toutiao.js','r') as f :
 	js = execjs.compile(f.read())
 	print(js.call('anonymous'))
